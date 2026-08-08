@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import mpu
+import mpu as mpu
 from frame import Frame
 from drone.body import Drone
 import math3d as md
