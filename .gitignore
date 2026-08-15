@@ -7,5 +7,5 @@ myenv/
 venv/
 env/
 # config vs code
-.vscode/
-.idea/
+vscode/
+idea/

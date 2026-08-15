@@ -51,9 +51,9 @@ drone = Drone(ax,50)
 O = np.eye(4)
 ori.update(O,scale=50)
 mix = Mixer()
-roll_pid = pctr(20,0.1,10)
-pitch_pid = pctr(20.0,0.1,10)
-yaw_pid = pctr(20,0.1,10)
+roll_pid = pctr(20,0.1,0.2,10)
+pitch_pid = pctr(20.0,0.1,0.1,10)
+yaw_pid = pctr(20,0.1,0.1,10)
 d_ferst = time.perf_counter()
 
 
