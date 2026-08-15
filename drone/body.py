@@ -13,6 +13,8 @@ class Drone:
         self.m3 = Motor(ax, np.array([-L,-L, 0]),"g")
         self.m4 = Motor(ax, np.array([-L, L, 0]),"y")
 
+        
+
     def update(self,T):
 
         R = T[:3,:3]
@@ -21,6 +23,9 @@ class Drone:
         self.m2.update(R)
         self.m3.update(R)
         self.m4.update(R)
+
+
+        
 
         self.arm1.update(
             self.m1.p,

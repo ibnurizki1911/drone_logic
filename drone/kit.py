@@ -1,15 +1,28 @@
 import numpy as np
 
+
 class Motor:
     def __init__(self,ax,position,color):
          self.position = position
          self.p = 0
          self.color = color
+         self.size = 0
 
          self.point, = ax.plot(
-              [],[],[],'o',color= color,markersize=8
+              [],[],[],'o',color= color,markersize=self.size
          )
- 
+
+    def setRPM(self,rpm):
+        if rpm > 1005:
+            self.size = 12
+        elif rpm < 995:
+            self.size = 4
+        else:
+            self.size = 7
+
+        self.point.set_markersize(self.size)
+    
+    
     def update(self,R):
 
         self.p = R @ self.position
